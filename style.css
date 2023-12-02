@@ -1,0 +1,260 @@
+body {
+    background-color: #B8E3F6;
+    margin: 0;
+    padding: 0;
+  }
+
+.card-login {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 388px;
+    height: 530px;
+    border: 2px solid #000;
+  }
+  
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Mengisi tinggi card-body */
+  }
+  
+  .logo-login {
+    position: absolute;
+    top: 20px; /* Atur jarak dari atas */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1; /* Mengatur urutan tampilan */
+  }
+  
+  .input input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .submit {
+    margin-top: 30px; /* Memberi jarak atas pada tombol submit dan link */
+  }
+  
+  .submit button,
+  .submit a {
+    width: 132px;
+    margin-left: 200px;
+    bottom: 100px;
+  }
+
+  .submit button {
+    background-color: #003348; /* Warna latar belakang untuk tombol "Masuk" */
+    color: white; /* Warna teks untuk tombol "Masuk" */
+    border: none; /* Hapus border jika diperlukan */
+    padding: 8px 16px; /* Sesuaikan padding jika diperlukan */
+  }
+  
+  .submit a {
+    color: blue; /* Warna teks untuk link "Buat Akun" */
+    text-decoration: none; /* Hilangkan garis bawah pada link jika diperlukan */
+  }
+
+  .custom-dropdown .dropdown-menu {
+    background-color: #949494;
+  }
+
+  .dropdown-toggle{
+    width: 348px;
+  }
+
+  .navbar {
+    display: flex;
+    align-items: center;
+    background-color: #003348;
+    height: 85px;
+    width: 100%;
+}
+
+
+.skleton {
+    margin-left: 100px;
+}
+
+.title {
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: 50px;
+}
+
+.card-kuis {
+  display: flex;
+  align-items: center; /* Posisikan konten secara vertikal di tengah */
+  width: 1035px;
+  height: 133px;
+  background-color: #f2f2f2; /* Warna latar belakang kartu */
+  border: 1px solid #ccc; /* Border jika diinginkan */
+  margin: 20px auto; /* Menengahkan kartu */
+}
+
+.content {
+  display: flex;
+  align-items: center; /* Posisikan konten dalam kartu secara vertikal di tengah */
+  gap: 10px; /* Jarak antara gambar dan teks */
+}
+
+.content img {
+  max-width: 100px; /* Atur lebar maksimum gambar */
+  margin-left: 20px;
+}
+
+.kuis-1{
+  border: 2px solid #F15E3D;
+}
+
+.kuis-2{
+  border: 2px solid #0764A7;
+}
+
+.kuis-3{
+  border: 2px solid #3A9F73;
+}
+
+.judul-kartu {
+  font-weight: bold;
+  font-size: 27px;
+  margin-left: 25px;
+}
+
+.cloud{
+  position: absolute;
+  bottom: 0%;
+  left: 10%;
+}
+
+.container-level{
+  margin-top: 150px;
+}
+
+.card-level{
+  display: flex;
+  align-items: center; /* Posisikan konten secara vertikal di tengah */
+  width: 1035px;
+  height: 63px;
+  background-color: #f2f2f2; /* Warna latar belakang kartu */
+  border: 1px solid #ccc; /* Border jika diinginkan */
+  margin: 20px auto;
+}
+
+#countdown {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: inline-block;
+  transform: translate(-50%, -50%);
+  transition: 1s;
+  font-size: 0vw;
+  opacity: 50%;
+  color: #040; 
+}
+
+.card-selesai {
+  display: inline-flex;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 140px;
+  height: 70px;
+  text-align: center;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.card-selesai a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 60px;
+}
+
+.card-selesai:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.container-cocok {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+
+/* Style untuk kartu pertanyaan */
+.pertanyaan {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 400px;
+  margin: 0 10px;
+  text-align: center;
+}
+
+/* Style untuk jawaban */
+.jawaban {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 400px;
+  margin: 0 10px;
+  text-align: center;
+}
+
+.card-soal {
+  width: 539px;
+  height: 282px;
+  background-color: #F15E3D;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0 auto; /* Untuk memposisikan di tengah horizontal */
+}
+
+.btn-benar,
+.btn-salah {
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  color: white;
+}
+
+.btn-benar {
+  background-color: #27ae60;
+}
+
+.btn-salah {
+  background-color: #c0392b;
+}
+
+.tombol-container {
+  margin-top: 20px; /* Jarak antara card-soal dan tombol */
+  text-align: center;
+}
+
+.img-questions {
+  display: block;
+  margin: 0 auto 10px; /* Memberi margin bawah agar jarak antara gambar dan teks pertanyaan */
+  width: 200px;
+  height: 200px;
+}
