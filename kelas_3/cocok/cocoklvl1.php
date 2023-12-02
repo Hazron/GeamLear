@@ -106,7 +106,7 @@ shuffledQuestions.forEach(item => {
   answerBox.textContent = item.answer;
 
   const container = document.createElement('div');
-  container.classList.add('row'); // Menggunakan class 'row' untuk Bootstrap Grid
+  container.classList.add('row');
   container.appendChild(questionBox);
   container.appendChild(answerBox);
 
@@ -114,15 +114,66 @@ shuffledQuestions.forEach(item => {
 });
 
 function shuffleBoxes() {
-  const boxes = Array.from(questionsContainer.children);
-  boxes.forEach(box => {
+ const boxes = Array.from(questionsContainer.children);
+ boxes.forEach(box => {
     questionsContainer.removeChild(box);
-  });
-  shuffleArray(boxes).forEach(box => {
+ });
+ shuffleArray(boxes).forEach(box => {
     questionsContainer.appendChild(box);
-  });
+ });
 }
 
+let canClick = true;
+let selectedBoxes = [];
+let correctCount = 0;
+let incorrectCount = 0;
+
+function checkGameCompletion() {
+ if (correctCount + incorrectCount === questions.length) {
+    alert(`Jawaban Benar: ${correctCount}\nJawaban Salah: ${incorrectCount}`);
+ }
+}
+
+function handleBoxClick(box) {
+ if (!canClick || selectedBoxes.includes(box) || selectedBoxes.length === 2) return;
+
+ selectedBoxes.push(box);
+ box.classList.add('selected');
+
+ if (selectedBoxes.length === 2) {
+    canClick = false;
+    const [firstBox, secondBox] = selectedBoxes;
+
+    if (firstBox.textContent === secondBox.textContent) {
+      correctCount++;
+      firstBox.classList.add('correct');
+      secondBox.classList.add('correct');
+    } else {
+      incorrectCount++;
+      firstBox.classList.add('incorrect');
+      secondBox.classList.add('incorrect');
+    }
+
+    setTimeout(() => {
+      firstBox.classList.remove('selected');
+      secondBox.classList.remove('selected');
+      firstBox.style.opacity = '0.5';
+      secondBox.style.opacity = '0.5';
+      firstBox.classList.contains('correct') ? firstBox.style.visibility = 'hidden' : firstBox.classList.remove('incorrect');
+      secondBox.classList.contains('correct') ? secondBox.style.visibility = 'hidden' : secondBox.classList.remove('incorrect');
+      selectedBoxes = [];
+      canClick = true;
+      checkGameCompletion();
+    }, 1000);
+ }
+}
+
+questionsContainer.addEventListener('click', event => {
+ const clickedBox = event.target;
+ if (clickedBox.classList.contains('question-box') || clickedBox.classList.contains('answer-box')) {
+    handleBoxClick(clickedBox);
+ }
+});
 shuffleBoxes();
 </script>
 
