@@ -5,7 +5,11 @@ $username = $_POST['username'];
 $password = $_POST['password'];
 $konfirmasi = $_POST['konfirmasi'];
 
-if ($password !== $konfirmasi) {
+if (empty($username) || empty($password) || empty($konfirmasi)) {
+    header("refresh:2;url=../register.php");
+    echo "Isi semua kolom pada formulir pendaftaran.";
+    exit();
+} elseif ($password !== $konfirmasi) {
     header("refresh:2;url=../register.php");
     echo "Konfirmasi password tidak sama dengan password.";
     exit();

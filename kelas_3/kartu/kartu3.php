@@ -23,8 +23,11 @@ if(!isset($_SESSION['id_user'])) {
     <img src="../../asset/skleton.png" alt="skleton" class="skleton">
     <h3 style="color : white;"><?php echo $_SESSION['username'];?></h3>
     <div class="btn-group">
-    <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-        
+    <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+    <div style="width: 10px; height: 40px; position: relative">
+        <div style="width: 10px; height: 8px; left: 0px; top: 0px; position: absolute; background: white; border-radius: 9999px"></div>
+        <div style="width: 10px; height: 8px; left: -0px; top: 32px; position: absolute; background: white; border-radius: 9999px"></div>
+        <div style="width: 10px; height: 8px; left: -0px; top: 16px; position: absolute; background: white; border-radius: 9999px"></div>
     </button>
         <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="#">Data Diri</a></li>
@@ -51,17 +54,17 @@ if(!isset($_SESSION['id_user'])) {
         $id_user = $_SESSION['id_user']; // Mendapatkan id_user dari sesi login
 
         // Mengecek status selesai untuk level 1
-        $sql1 = "SELECT selesai FROM kelas WHERE id_user = '$id_user' AND level = 1";
+        $sql1 = "SELECT selesai FROM kartu WHERE id_user = '$id_user' AND level = 1";
         $result1 = $conn->query($sql1);
         $selesai1 = ($result1->num_rows > 0) ? $result1->fetch_assoc()['selesai'] : '';
 
         // Mengecek status selesai untuk level 2
-        $sql2 = "SELECT selesai FROM kelas WHERE id_user = '$id_user' AND level = 2";
+        $sql2 = "SELECT selesai FROM kartu WHERE id_user = '$id_user' AND level = 2";
         $result2 = $conn->query($sql2);
         $selesai2 = ($result2->num_rows > 0) ? $result2->fetch_assoc()['selesai'] : '';
 
         // Mengecek status selesai untuk level 3
-        $sql3 = "SELECT selesai FROM kelas WHERE id_user = '$id_user' AND level = 3";
+        $sql3 = "SELECT selesai FROM kartu WHERE id_user = '$id_user' AND level = 3";
         $result3 = $conn->query($sql3);
         $selesai3 = ($result3->num_rows > 0) ? $result3->fetch_assoc()['selesai'] : '';
 
@@ -88,6 +91,7 @@ if(!isset($_SESSION['id_user'])) {
 
 </div>
 
-<?php 
-include("../../component/footer.php");
-?>
+<img src="../../asset/cloudfix.png" alt="cloud" class="cloud">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

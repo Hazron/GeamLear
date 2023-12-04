@@ -1,7 +1,8 @@
 body {
-    background-color: #B8E3F6;
+    background-image: url(asset/Awal.png);
     margin: 0;
     padding: 0;
+    width: 100dvh;
   }
 
 .card-login {
@@ -46,6 +47,35 @@ body {
     bottom: 100px;
   }
 
+  label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+/* Gaya untuk select */
+select {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    width: 100%; /* Mengisi lebar dengan penuh */
+    max-width: 300px; /* Atur lebar maksimum */
+    box-sizing: border-box; /* Menghitung padding dan border ke dalam lebar */
+    margin-bottom: 15px; /* Jarak dari bawah label */
+}
+
+/* Gaya untuk tombol submit */
+input[type="submit"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #003348;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
   .submit button {
     background-color: #003348; /* Warna latar belakang untuk tombol "Masuk" */
     color: white; /* Warna teks untuk tombol "Masuk" */
@@ -76,10 +106,22 @@ body {
 
 
 .skleton {
-    margin-left: 100px;
+    margin-left: 250px;
 }
 
 .title {
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: 50px;
+}
+
+.judul-datadiri {
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: 50px;
+}
+
+.title-kuis {
   text-align: center;
   margin-top: 80px;
   margin-bottom: 50px;
@@ -166,6 +208,7 @@ body {
   padding: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease-in-out;
+  align-items: center;
 }
 
 .card-selesai a {
@@ -174,6 +217,7 @@ body {
   font-weight: bold;
   font-size: 16px;
   line-height: 60px;
+  align-items: center;
 }
 
 .card-selesai:hover {
@@ -217,7 +261,10 @@ body {
   background-color: #F15E3D;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  position: relative;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -225,18 +272,22 @@ body {
   color: white;
   font-family: Arial, sans-serif;
   text-align: center;
-  margin: 0 auto; /* Untuk memposisikan di tengah horizontal */
 }
 
 .btn-benar,
 .btn-salah {
   padding: 10px 20px;
+  width: 130px;
+  height: 70px;
   margin: 5px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   font-size: 16px;
   color: white;
+  background-color: #F15E3D; /* Warna latar belakang tombol */
+  margin-top: 23%;
+  transition: background-color 0.3s; /* Animasi perubahan warna */
 }
 
 .btn-benar {
@@ -257,4 +308,66 @@ body {
   margin: 0 auto 10px; /* Memberi margin bawah agar jarak antara gambar dan teks pertanyaan */
   width: 200px;
   height: 200px;
+}
+
+
+.title {
+  width: 531px;
+  height: 93px;
+  background-color: white;
+  /* Tambahan gaya lainnya sesuai kebutuhan */
+}
+
+.formdiri{
+  margin-left: 20px;
+  width: 100%;
+  max-width: 950px;
+  margin: 0 auto;
+  display: flex; /* Agar elemen turun ke bawah ketika tidak cukup lebar */
+  justify-content: center;
+}
+
+/* Gaya untuk form 1 */
+.form1 {
+  width: 50%;
+  box-sizing: border-box; 
+  margin-bottom: 10px;
+  margin-right: 20px;
+}
+
+.form2 {
+  width: 50%; 
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.input_diri {
+  width: 100%;
+  max-width: 562px;
+  padding: 6px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.done {
+  background-color: #003348; /* Warna latar belakang */
+  height: 45px; /* Tinggi tombol */
+  width: 135px; /* Lebar tombol */
+  border: none;
+  border-radius: 4px;
+  color: white; /* Warna teks */
+  font-size: 14px;
+  cursor: pointer;
+}
+.form3 {
+  margin-top: 310px;
 }

@@ -22,10 +22,13 @@ if(!isset($_SESSION['id_user'])) {
 <body>
 <div class="navbar">
     <img src="../../asset/skleton.png" alt="skleton" class="skleton">
-    <h3 style="color : white;"><?php echo $_SESSION['username'];?></h3>
+    <h3 style="color : white;" class="username"><?php echo $_SESSION['username'];?></h3>
     <div class="btn-group">
-    <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-        
+    <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+    <div style="width: 10px; height: 40px; position: relative" class="dropdown">
+        <div style="width: 10px; height: 8px; left: 0px; top: 0px; position: absolute; background: white; border-radius: 9999px"></div>
+        <div style="width: 10px; height: 8px; left: -0px; top: 32px; position: absolute; background: white; border-radius: 9999px"></div>
+        <div style="width: 10px; height: 8px; left: -0px; top: 16px; position: absolute; background: white; border-radius: 9999px"></div>
     </button>
         <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="#">Data Diri</a></li>
@@ -39,10 +42,10 @@ if(!isset($_SESSION['id_user'])) {
     </div>
 
     <div class="card-soal">
-    <label for="soal"> 
+      <label for="soal"> 
         3.163 = .... 3000 + 160 + 3
-    </label>
-  </div>
+      </label>
+    </div>
   <div class="tombol-container">
       <button class="btn-benar">Benar</button>
       <button class="btn-salah">Salah</button>

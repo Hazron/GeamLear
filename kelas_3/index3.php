@@ -15,15 +15,6 @@ include("../component/navbar.php");
         </div>
     </a>
 
-    <a href="cocok/cocok3.php">
-        <div class="card-kuis kuis-2">
-        <div class="content">
-                <img src="../asset/cocok.png" alt="kartu">
-                <label class="judul-kartu">Temukan Kecocokan</label>
-            </div>
-        </div>
-    </a>
-
     <a href="tts3.php">
         <div class="card-kuis kuis-3">
         <div class="content">

@@ -23,7 +23,7 @@ if(!isset($_SESSION['id_user'])) {
     <div class="card card-login" style="width: 388px; height: 530px;">
         <div class="card-body">
             <img src="asset/logoGeame.png" alt="logoLogin" class="logo-login">
-            <h3>Hallo</h3>
+            <h3 style="color : white;"><?php echo $_SESSION['username'];?></h3>
             <form action="script/class.php" method="post">
                 <label for="kelas">Pilih Kelas:</label>
                 <select name="kelas" id="kelas">

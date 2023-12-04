@@ -22,10 +22,13 @@ if(!isset($_SESSION['id_user'])) {
 <body>
 <div class="navbar">
     <img src="../../asset/skleton.png" alt="skleton" class="skleton">
-    <h3 style="color : white;"><?php echo $_SESSION['id_user'];?></h3>
+    <h3 style="color : white;"><?php echo $_SESSION['username'];?></h3>
     <div class="btn-group">
-    <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-        
+    <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+    <div style="width: 10px; height: 40px; position: relative">
+        <div style="width: 10px; height: 8px; left: 0px; top: 0px; position: absolute; background: white; border-radius: 9999px"></div>
+        <div style="width: 10px; height: 8px; left: -0px; top: 32px; position: absolute; background: white; border-radius: 9999px"></div>
+        <div style="width: 10px; height: 8px; left: -0px; top: 16px; position: absolute; background: white; border-radius: 9999px"></div>
     </button>
         <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="#">Data Diri</a></li>
@@ -120,6 +123,11 @@ let currentQuestion = 0;
       }
 
       currentQuestion++;
+      const maxScore = 5; // Skor maksimal dari pertanyaan
+      const maxPossibleScore = 100; // Skor maksimal yang ingin Anda capai
+
+      // Mengonversi skor ke rentang 0-100
+      const convertedScore = (score / maxScore) * maxPossibleScore; 
       if (currentQuestion < questions.length) {
         displayQuestion();
       } else {
@@ -128,7 +136,7 @@ let currentQuestion = 0;
           text: `Skormu: ${score}/${questions.length}`,
           icon: 'info'
         }).then(() => {
-          window.location.href = `proseslvl2.php?score=${score}&level=${level}`;
+          window.location.href = `proses.php?score=${score}&level=${level}`;
         });
       }
     }

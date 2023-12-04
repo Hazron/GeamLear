@@ -31,21 +31,23 @@ if(!isset($_SESSION['id_user'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <title>Login | GeamaLear</title>
 </head>
 <body>
 <div class="navbar">
-    <img src="../asset/skleton.png" alt="skleton" class="skleton">
+    <img src="asset/skleton.png" alt="skleton" class="skleton">
     <h3 style="color : white;">Halo <?php echo $_SESSION['username']; ?></h3>
     <div class="btn-group">
-    <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-        
+    <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+    <div style="width: 10px; height: 40px; position: relative">
+        <div style="width: 10px; height: 8px; left: 0px; top: 0px; position: absolute; background: white; border-radius: 9999px"></div>
+        <div style="width: 10px; height: 8px; left: -0px; top: 32px; position: absolute; background: white; border-radius: 9999px"></div>
+        <div style="width: 10px; height: 8px; left: -0px; top: 16px; position: absolute; background: white; border-radius: 9999px"></div>
     </button>
         <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Data Diri</a></li>
+            <li><a class="dropdown-item" href="datadiri.php">Data Diri</a></li>
             <li><a class="dropdown-item" href="script/logout.php">Logout</a></li>
         </ul>
     </div>
@@ -59,15 +61,6 @@ if(!isset($_SESSION['id_user'])) {
             <div class="content">
                 <img src="asset/kartu.png" alt="kartu">
                 <label class="judul-kartu">Kartu Lampu Kilat</label>
-            </div>
-        </div>
-    </a>
-
-    <a href="cocok<?php echo $kelas; ?>/cocok<?php echo $kelas; ?>.php">
-        <div class="card-kuis kuis-2">
-            <div class="content">
-                <img src="asset/cocok.png" alt="kartu">
-                <label class="judul-kartu">Temukan Kecocokan</label>
             </div>
         </div>
     </a>
